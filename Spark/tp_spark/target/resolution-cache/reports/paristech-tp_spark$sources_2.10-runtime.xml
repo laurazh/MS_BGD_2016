@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="paristech"
+		module="tp_spark$sources_2.10"
+		revision="1.0"
+		conf="runtime"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20160921142425"/>
+	<dependencies>
+		<module organisation="com.github.scopt" name="scopt_2.10">
+			<revision name="3.4.0" status="release" pubdate="20160215170319" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scopt/scopt" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="3">
+				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
+				<metadata-artifact status="no" details="" size="2670" time="0" location="/Users/maxime/.ivy2/cache/com.github.scopt/scopt_2.10/ivy-3.4.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/github/scopt/scopt_2.10/3.4.0/scopt_2.10-3.4.0.pom"/>
+				<caller organisation="paristech" name="tp_spark$sources_2.10" conf="compile, runtime" rev="3.4.0" rev-constraint-default="3.4.0" rev-constraint-dynamic="3.4.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="scopt_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="7386" time="0" location="/Users/maxime/.ivy2/cache/com.github.scopt/scopt_2.10/srcs/scopt_2.10-3.4.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/github/scopt/scopt_2.10/3.4.0/scopt_2.10-3.4.0-sources.jar"/>
+					</artifact>
+					<artifact name="scopt_2.10" type="jar" ext="jar" status="no" details="" size="131030" time="0" location="/Users/maxime/.ivy2/cache/com.github.scopt/scopt_2.10/jars/scopt_2.10-3.4.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/github/scopt/scopt_2.10/3.4.0/scopt_2.10-3.4.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.6" status="release" pubdate="20150922130247" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="4">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2669" time="0" location="/Users/maxime/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom"/>
+				<caller organisation="paristech" name="tp_spark$sources_2.10" conf="compile, runtime" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="1.0" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/"/>
+				<artifacts>
+					<artifact name="scala-library" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1065535" time="0" location="/Users/maxime/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.10.6-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6-sources.jar"/>
+					</artifact>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7132001" time="0" location="/Users/maxime/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.6.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.databricks" name="spark-csv_2.10">
+			<revision name="1.4.0" status="release" pubdate="20160304200426" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/databricks/spark-csv" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="4060" time="0" location="/Users/maxime/.ivy2/cache/com.databricks/spark-csv_2.10/ivy-1.4.0.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/databricks/spark-csv_2.10/1.4.0/spark-csv_2.10-1.4.0.pom"/>
+				<caller organisation="paristech" name="tp_spark$sources_2.10" conf="compile, runtime" rev="1.4.0" rev-constraint-default="1.4.0" rev-constraint-dynamic="1.4.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="spark-csv_2.10" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="22176" time="0" location="/Users/maxime/.ivy2/cache/com.databricks/spark-csv_2.10/srcs/spark-csv_2.10-1.4.0-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/databricks/spark-csv_2.10/1.4.0/spark-csv_2.10-1.4.0-sources.jar"/>
+					</artifact>
+					<artifact name="spark-csv_2.10" type="jar" ext="jar" status="no" details="" size="157294" time="0" location="/Users/maxime/.ivy2/cache/com.databricks/spark-csv_2.10/jars/spark-csv_2.10-1.4.0.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/databricks/spark-csv_2.10/1.4.0/spark-csv_2.10-1.4.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.univocity" name="univocity-parsers">
+			<revision name="1.5.1" status="release" pubdate="20150409005600" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/uniVocity/univocity-parsers" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3586" time="0" location="/Users/maxime/.ivy2/cache/com.univocity/univocity-parsers/ivy-1.5.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/com/univocity/univocity-parsers/1.5.1/univocity-parsers-1.5.1.pom"/>
+				<caller organisation="paristech" name="tp_spark$sources_2.10" conf="compile, runtime" rev="1.5.1" rev-constraint-default="1.5.1" rev-constraint-dynamic="1.5.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="univocity-parsers" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="171854" time="0" location="/Users/maxime/.ivy2/cache/com.univocity/univocity-parsers/srcs/univocity-parsers-1.5.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/univocity/univocity-parsers/1.5.1/univocity-parsers-1.5.1-sources.jar"/>
+					</artifact>
+					<artifact name="univocity-parsers" type="jar" ext="jar" status="no" details="" size="148962" time="0" location="/Users/maxime/.ivy2/cache/com.univocity/univocity-parsers/jars/univocity-parsers-1.5.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/com/univocity/univocity-parsers/1.5.1/univocity-parsers-1.5.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-csv">
+			<revision name="1.1" status="release" pubdate="20141116214800" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-csv/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<metadata-artifact status="no" details="" size="10745" time="0" location="/Users/maxime/.ivy2/cache/org.apache.commons/commons-csv/ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1.pom"/>
+				<caller organisation="paristech" name="tp_spark$sources_2.10" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-csv" type="jar" ext="jar" status="no" details="" size="36888" time="0" location="/Users/maxime/.ivy2/cache/org.apache.commons/commons-csv/jars/commons-csv-1.1.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1.jar"/>
+					</artifact>
+					<artifact name="commons-csv" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="38045" time="0" location="/Users/maxime/.ivy2/cache/org.apache.commons/commons-csv/srcs/commons-csv-1.1-sources.jar">
+						<origin-location is-local="false" location="https://jcenter.bintray.com/org/apache/commons/commons-csv/1.1/commons-csv-1.1-sources.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
