@@ -6,14 +6,14 @@ ExoPlanetsClassification
 
 Note
 --------------
-The code read a .parquet file.   
+The code reads a **.parquet** file.   
 
 How to run
 --------------
 
 * Build project 
 
-command (run the command on the folder containing build.sbt):
+command (run the command on the folder containing **build.sbt**):
 
     sbt assembly
 
