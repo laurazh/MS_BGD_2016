@@ -4,6 +4,10 @@ Spark
 
 ExoPlanetsClassification
 
+Note
+--------------
+The code read a .parquet file.  
+You should chabge the path inside the code before using.
 
 How to run
 --------------
@@ -56,7 +60,8 @@ replace "/cal/homes/lazhou/Downloads/tp_spark/target/scala-2.11/tp_spark-assembl
     
  
 
- # Improvement
+ Improvement
+ --------------
  
  - Make a more flexible code 
  - Save the the best model
