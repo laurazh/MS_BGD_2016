@@ -62,6 +62,8 @@ Execution Result:
     
  
 with random training split:
+--------------
+
 Confusion matrix:
  
     +-----+----------+-----+                                                        
@@ -79,7 +81,10 @@ Test Error with training split = 0.01464920948616566
  
 
 I use crossvalidator to improve the accuracy.
+
 with cross validation:
+--------------
+
  Confusion matrix:
   
     +-----+----------+-----+                                                        
