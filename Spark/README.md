@@ -80,7 +80,7 @@ Accuracy with training split = 0.9853507905138343
 Test Error with training split = 0.01464920948616566   
  
 
-I use crossvalidator to improve the accuracy.
+**I use crossvalidator to improve the accuracy.**
 
 with cross validation:
 --------------
