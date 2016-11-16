@@ -28,8 +28,8 @@ spark-submit command :
 
 replace "/cal/homes/lazhou/Downloads/tp_spark/target/scala-2.11/tp_spark-assembly-1.0.jar" by the path of the jar
 
-
-
+Execution Result:
+--------------
 
     +-----+--------------------+--------------------+
     |label|            features|      scaledFeatures|
