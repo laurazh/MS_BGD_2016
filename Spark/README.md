@@ -60,28 +60,10 @@ Execution Result:
     
     
     
- Confusion matrix:
-  
-    +-----+----------+-----+                                                        
-    |label|prediction|count|
-    +-----+----------+-----+
-    |  1.0|       1.0|  198|
-    |  0.0|       1.0|   11|
-    |  1.0|       0.0|   22|
-    |  0.0|       0.0|  357|
-    +-----+----------+-----+
-
-
  
-Accuracy:
-Accuracy with crossvalidator = 0.986536561264823
-
-Test Error with crossvalidator = 0.013463438735176969
-
-I use crossvalidator to improve the accuracy.
-
 with random training split:
-
+Confusion matrix:
+ 
     +-----+----------+-----+                                                        
     |label|prediction|count|
     +-----+----------+-----+
@@ -93,7 +75,28 @@ with random training split:
 
 Accuracy with training split = 0.9853507905138343
 
-Test Error with training split = 0.01464920948616566
+Test Error with training split = 0.01464920948616566   
+ 
+
+I use crossvalidator to improve the accuracy.
+with cross validation:
+ Confusion matrix:
+  
+    +-----+----------+-----+                                                        
+    |label|prediction|count|
+    +-----+----------+-----+
+    |  1.0|       1.0|  198|
+    |  0.0|       1.0|   11|
+    |  1.0|       0.0|   22|
+    |  0.0|       0.0|  357|
+    +-----+----------+-----+
+
+ 
+Accuracy with crossvalidator = 0.986536561264823
+
+Test Error with crossvalidator = 0.013463438735176969
+
+
 
 
 Improvement
