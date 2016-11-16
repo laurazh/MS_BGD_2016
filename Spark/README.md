@@ -26,8 +26,6 @@ replace "/cal/homes/lazhou/Downloads/tp_spark/target/scala-2.11/tp_spark-assembl
 
 
 
- 
-
 
     +-----+--------------------+--------------------+
     |label|            features|      scaledFeatures|
@@ -54,6 +52,15 @@ replace "/cal/homes/lazhou/Downloads/tp_spark/target/scala-2.11/tp_spark-assembl
     |  1.0|[3.94104632,1.16E...|[0.03523803832040...|
     +-----+--------------------+--------------------+
     only showing top 20 rows
+    
+    
+ 
+
+ # Improvement
+ 
+ - Make a more flexible code 
+ - Save the the best model
+ - Use a K-fold instead of training split
     
     
 
