@@ -81,12 +81,11 @@ Test Error with training split = 0.04612230162550446
 
  
 
-**I use crossvalidator to improve the accuracy.**
-
 with cross validation:
 --------------
 
  Confusion matrix: 
+ 
     +-----+----------+-----+
     |label|prediction|count|
     +-----+----------+-----+
@@ -102,6 +101,7 @@ The score with crossvalidator: *************************************************
 Accuracy with crossvalidator = 0.9580617987929055
 Test Error with crossvalidator = 0.04193820120709446
 
+The score with cv or training split are similar.
 
 Improvement
 --------------
