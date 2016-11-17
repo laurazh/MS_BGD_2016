@@ -25,7 +25,7 @@ spark-submit command (run the command in spark-2.0.0-bin-hadoop2.6/bin):
 
     ./spark-submit --conf spark.eventLog.enabled=true --conf spark.eventLog.dir="/tmp" --driver-memory 3G --executor-memory 4G --class com.sparkProject.JobML /cal/homes/lazhou/Downloads/tp_spark/target/scala-2.11/tp_spark-assembly-1.0.jar /cal/homes/lazhou/Downloads/cleanedDataFrame.parquet
 
-replace "/cal/homes/lazhou/Downloads/cleanedDataFrame.parquet" 
+replace "/cal/homes/lazhou/Downloads/cleanedDataFrame.parquet" with your correct path
 
 replace "/cal/homes/lazhou/Downloads/tp_spark/target/scala-2.11/tp_spark-assembly-1.0.jar" by the path of the jar
 
