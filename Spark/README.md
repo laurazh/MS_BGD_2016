@@ -76,6 +76,7 @@ Confusion matrix:
     +-----+----------+-----+
 
 The score with training split: ****************************************************************
+
 Accuracy with training split = 0.9538776983744955
 
 Test Error with training split = 0.04612230162550446
@@ -99,6 +100,7 @@ with cross validation:
 
  
 The score with crossvalidator: ****************************************************************
+
 Accuracy with crossvalidator = 0.9580617987929055
 
 Test Error with crossvalidator = 0.04193820120709446
