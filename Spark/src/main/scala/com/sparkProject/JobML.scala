@@ -2,7 +2,7 @@ package com.sparkProject
 import org.apache.spark.sql.SparkSession
 
 /**
-  * Created by laura ZHOU and pauline thounim on 25/10/16.
+  * Created by laura ZHOU and pauline thoumin on 25/10/16.
   */
 object JobML {
   //function main
@@ -108,11 +108,14 @@ object JobML {
       .addGrid(lr.regParam, r)
       .build()
 
+    // Creating the BinaryClassificationEvaluator
+    val evaluator = new BinaryClassificationEvaluator().setLabelCol("label")
+
     val cv = new CrossValidator()
       .setEstimator(lr)
-      .setEvaluator(new BinaryClassificationEvaluator)
+      .setEvaluator(evaluator)
       .setEstimatorParamMaps(paramGrid)
-      .setNumFolds(3)  //Use 3+ in practice cross fold better than random training split
+      .setNumFolds(5)  //Use 3+ in practice cross fold better than random training split
 
     // Run cross-validation, and choose the best set of parameters.
     val cvModel = cv.fit(trainingData)
@@ -122,22 +125,25 @@ object JobML {
     val df_WithPredictions = cvModel.transform(testData)
 
     // Select (prediction, true label) and compute test error.
-    val evaluator = new BinaryClassificationEvaluator().setLabelCol("label")
     val accuracy = evaluator.evaluate(df_WithPredictions)
 
-    println("Accuracy with crossvalidator = " + accuracy)
-    println("Test Error with crossvalidator = " + (1.0 - accuracy))
+    println("The score with crossvalidator: ****************************************************************")
+    evaluator.setRawPredictionCol("prediction")
+    println("Accuracy with crossvalidator = "+evaluator.evaluate(df_WithPredictions) + "\n")
+    println("Test Error with crossvalidator = "+ (1.0-evaluator.evaluate(df_WithPredictions)) + "\n")
+
 
     df_WithPredictions.groupBy("label", "prediction").count.show()
 
     ////////////METHODE 2 AVEC TRAIN SPLIT donne des résultats similaires
 
     // A TrainValidationSplit requires an Estimator, a set of Estimator ParamMaps, and an Evaluator.
+    val evaluator1 = new BinaryClassificationEvaluator().setLabelCol("label")
 
     import org.apache.spark.ml.tuning.TrainValidationSplit
     val trainValidationSplit = new TrainValidationSplit()
       .setEstimator(lr)
-      .setEvaluator(new BinaryClassificationEvaluator)
+      .setEvaluator(evaluator1)
       .setEstimatorParamMaps(paramGrid)
       // 70% of the data will be used for training and the remaining 30% for validation.
       .setTrainRatio(0.7)
@@ -151,11 +157,12 @@ object JobML {
     df_WithPredictions1.groupBy("label", "prediction").count.show()
 
     // Select (prediction, true label) and compute test error.
-    val evaluator1 = new BinaryClassificationEvaluator().setLabelCol("label")
-    val accuracy1 = evaluator1.evaluate(df_WithPredictions1)
+    // Printing the score :
+    println("The score with training split: ****************************************************************")
+    evaluator1.setRawPredictionCol("prediction")
+    println("Accuracy with training split = "+evaluator1.evaluate(df_WithPredictions1) + "\n")
+    println("Test Error with training split = "+ (1.0-evaluator1.evaluate(df_WithPredictions1)) + "\n")
 
-    println("Accuracy with training split = " + accuracy1)
-    println("Test Error with training split = " + (1.0 - accuracy1))
 
 
   }
