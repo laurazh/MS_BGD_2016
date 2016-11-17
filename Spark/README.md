@@ -65,51 +65,49 @@ with random training split:
 --------------
 
 Confusion matrix:
- 
-    +-----+----------+-----+                                                        
+    
+    +-----+----------+-----+
     |label|prediction|count|
     +-----+----------+-----+
-    |  1.0|       1.0|  198|
-    |  0.0|       1.0|    9|
-    |  1.0|       0.0|   22|
-    |  0.0|       0.0|  359|
+    |  1.0|       1.0|  227|
+    |  0.0|       1.0|   19|
+    |  1.0|       0.0|   12|
+    |  0.0|       0.0|  433|
     +-----+----------+-----+
 
-Accuracy with training split = 0.9853507905138343
+The score with training split: ****************************************************************
+Accuracy with training split = 0.9538776983744955
+Test Error with training split = 0.04612230162550446
 
-Test Error with training split = 0.01464920948616566   
  
-
-**I use crossvalidator to improve the accuracy.**
 
 with cross validation:
 --------------
 
- Confusion matrix:
-  
-    +-----+----------+-----+                                                        
+ Confusion matrix: 
+ 
+    +-----+----------+-----+
     |label|prediction|count|
     +-----+----------+-----+
-    |  1.0|       1.0|  198|
-    |  0.0|       1.0|   11|
-    |  1.0|       0.0|   22|
-    |  0.0|       0.0|  357|
+    |  1.0|       1.0|  229|
+    |  0.0|       1.0|   19|
+    |  1.0|       0.0|   10|
+    |  0.0|       0.0|  433|
     +-----+----------+-----+
 
+
  
-Accuracy with crossvalidator = 0.986536561264823
+The score with crossvalidator: ****************************************************************
+Accuracy with crossvalidator = 0.9580617987929055
+Test Error with crossvalidator = 0.04193820120709446
 
-Test Error with crossvalidator = 0.013463438735176969
-
-
-
+The score with cv or training split are similar.
 
 Improvement
 --------------
- 
- - Make a more flexible code 
+  
  - Save the the best model
- - Use a K-fold instead of training split
+ - Increase the iteration
     
     
 
