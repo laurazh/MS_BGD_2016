@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <style>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title>Tous les chemins mènent à la philosophie</title> 
+    p.error { color: : orange;}
+    p.outset {border-style: outset;}
+    </style>
+  </head>
+  <center> 
+  <h1 style="color:white;background-color:black;" > 
+  <a href="http://127.0.0.1:8000/" style="text-decoration: none; color: white">
+  Commencer le Jeux</a> </h1> 
+  </center>
+
+  <body>
+  <!--
+    {% with messages = get_flashed_messages() %}
+      {% if messages %} 
+      <ul class=flashes>
+        {% for message in messages %}
+          {{ message }}  
+        {% endfor %} 
+        </ul>
+      {% endif %}
+    {% endwith %}
+-->
+{% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}  
+          {% if  message[0]=='error' %}
+          <p style="color : red;background-color: #FFBABA">{{ message[1]}}</p> 
+          {% elif message[0]=='success' %}
+          <p style="color : green;background-color: #DFF2BF">{{ message[1]}}</p> 
+          {% else%}
+          <p style="color : orange;background-color: #FEEFB3">{{ message[1]}}</p> 
+          {% endif %}
+
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block body %}
+
+      {# Début du bloc "body", dont vous devez modifier le contenu #}
+      <div style="width: 100px; margin: 50px auto 0 auto; border :black;"> 
+      <p>Entrer un mot :</p>
+      <form action="/new-game" method="post" onsubmit="return vrf()">
+
+      <input type="text" name="page" placeholder="Par exemple 'philo'" required=""><br>  
+      <input type="submit" value="Submit" style=" float: right">
+      </form>
+      <p>{{ message }}</p>
+      </div>
+      {# Fin du bloc "body" #}
+    {% endblock %}
+  </body>
+  
+</html>
+
